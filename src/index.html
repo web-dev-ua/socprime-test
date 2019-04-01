@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="socprimeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Test SOC Prime</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="bg-light" ng-controller="Controller">
+    <div class="container">
+    <div class="py-5 text-center">
+        <p class="lead">Test SOC Prime</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <label for="name">Enter name</label>
+                    <input type="text" class="form-control mb-4" id="name" ng-model="name" ng-model-options="{ debounce: 500 }">
+
+                    <label for="name">Enter name (v2)</label>
+                    <input autocomplete="namesSource" type="text" class="form-control" id="name2" ng-model="name2" ng-model-options="{ debounce: 500 }">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <autocomplete-list class="autocomplete-list" value="name" source="namesSource"></autocomplete-list>
+        </div>
+    </div>
+</div>
+</body>
+</html>
